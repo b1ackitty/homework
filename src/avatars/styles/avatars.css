@@ -1,1 +1,69 @@
-/* 여기에 스타일을 구현해 주세요 */
+/* 상자 배경 색깔과 안쪽 여백 */
+.box {
+  background-color: #fff;
+  padding: 100px;
+}
+
+ul {
+  /* 프로필 이미지를 4x2로 정렬 */
+  display: grid;
+  grid-template-columns: repeat(4, 64px);
+  /* 이미지 사이 여백 */
+  gap: 20px;
+  /* 필요 없는 여백 없애기 */
+  padding: 0;
+  margin: 0;
+  /* 리스트 마커 없애기 */
+  list-style-type: none;
+}
+
+/* 필요 없는 여백 없애기 */
+li {
+  margin: 0;
+  padding: 0;
+}
+
+img {
+  display: block;
+  width: 64px;
+  height: 64px;
+  /* 프로필 이미지 동그랗게 만들기 */
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.profile {
+  /* 아바타 상태 알리는 동그라미의 위치를 잡아주기 위해 설정 */
+  position: relative;
+  width: 64px;
+  height: 64px;
+}
+
+/* 온라인임을 알려주는 초록색 동그라미 */
+.online {
+  box-sizing: border-box;
+  display: inline-block;
+  border: #fff solid 1px;
+  border-radius: 50%;
+  background-color: #4cfe88;
+  width: 18px;
+  height: 18px;
+  /* 동그라미 위치 고정 */
+  position: absolute;
+  bottom: 0;
+  right: 0;
+}
+
+/* 오프라인임을 알려주는 회색 동그라미 */
+.offline {
+  box-sizing: border-box;
+  display: inline-block;
+  width: 18px;
+  height: 18px;
+  border: #fff solid 1px;
+  border-radius: 50%;
+  background-color: #dbdbdb;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+}
