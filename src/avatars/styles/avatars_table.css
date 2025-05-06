@@ -17,9 +17,12 @@ img {
   border-radius: 50%;
 }
 
-table {
+.box {
   background-color: #fff;
   padding: 100px;
+}
+
+table {
   border-spacing: 0px;
 }
 
