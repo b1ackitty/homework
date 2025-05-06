@@ -1,0 +1,60 @@
+/* 페이지에는 안 보이고 sr로만 읽기 */
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+img {
+  display: block;
+  height: 64px;
+  width: 64px;
+  border-radius: 50%;
+}
+
+table {
+  background-color: #fff;
+  padding: 100px;
+  border-spacing: 0px;
+}
+
+tr,
+th {
+  margin: 0px;
+  padding: 0px;
+  white-space: nowrap;
+}
+
+td {
+  position: relative;
+  padding: 10px;
+  overflow: visible;
+}
+
+span {
+  position: absolute;
+  right: 20px;
+  bottom: 0px;
+  box-sizing: border-box;
+  border: #fff 1px solid;
+  border-radius: 50%;
+  width: 18px;
+  height: 18px;
+}
+
+.online {
+  background-color: #4cfe88;
+}
+
+.offline {
+  background-color: #dbdbdb;
+}
+
+.gap {
+  height: 20px;
+}
