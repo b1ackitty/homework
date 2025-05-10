@@ -1,1 +1,277 @@
-/* CSS를 활용하여 레이아웃 및 스타일링을 완성해주세요 */
+:root {
+  /* 네이버 색상 테마 */
+  --white: #fff;
+  --black: #121212;
+  --gray: #999;
+  --light-gray: #dadada;
+  --green: #03cf5d;
+  --red: #ff1414;
+  --light-blue: #e9f0fd;
+  --focus-color: #24388d;
+
+  /* 글자 크기 */
+  --text-14: 0.875rem;
+  --text-16: 1rem;
+
+  /* 줄 높이 */
+  --leading: 1.5;
+
+  /* 여백 및 간격 */
+  --spacing-8: 0.5rem;
+  --spacing-10: 0.625rem;
+  --spacing-12: 0.75rem;
+  --spacing-14: 0.875rem;
+  --spacing-16: 1rem;
+  --spacing-18: 1.125rem;
+  --spacing-20: 1.25rem;
+}
+
+body * {
+  box-sizing: border-box;
+}
+
+/* 접근성 관련 CSS */
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  clip-path: inset(50%);
+  white-space: nowrap;
+  border-width: 0;
+}
+
+body {
+  font-size: var(--text-16);
+  color: var(--black);
+}
+
+/* 컴포넌트 디자인 */
+.component-wrapper {
+  > div {
+    margin-block: 1em;
+  }
+}
+
+/* 로고 제목 컴포넌트 디자인 */
+.logo {
+  margin-block: 3.125rem;
+}
+
+/* 텍스트 입력 서식 컴포넌트 디자인 */
+.form-input {
+  width: 100%;
+  font-size: var(--text-14);
+  line-height: var(--leading);
+  background: var(--white);
+
+  input {
+    --placeholder-color: var(--light-gray);
+    --border-color: var(--light-gray);
+
+    padding: var(--spacing-14);
+    width: 100%;
+    height: 45px;
+    border: 1px solid var(--border-color);
+    background: var(--white);
+
+    &::placeholder {
+      color: var(--placeholder-color);
+    }
+
+    &:focus {
+      --focused-outline: var(--green);
+      --focused-bg: var(--light-blue);
+
+      outline-color: var(--focused-outline);
+      background: var(--focused-bg);
+    }
+  }
+}
+
+/* 버튼 컴포넌트 디자인 */
+/* 공통 버튼 스타일 */
+button {
+  border: 0;
+  background: transparent;
+  font-size: var(--text-16);
+  height: 45px;
+  line-height: var(--leading);
+  font-weight: 700;
+  display: block;
+}
+
+.fill-button {
+  --bg-color: var(--green);
+
+  background: var(--bg-color);
+  border: 2px solid var(--bg-color);
+  color: var(--white);
+}
+
+.outline-button {
+  --border-color: var(--green);
+
+  border: 2px solid var(--border-color);
+  color: var(--border-color);
+}
+
+/* 체크박스 컴포넌트 디자인 */
+.form-checkbox {
+  --font-color: var(--black);
+
+  font-size: var(--text-16);
+  color: var(--font-color);
+  line-height: var(--leading);
+  display: inline-block;
+  position: relative;
+  height: 24px;
+
+  input {
+    position: absolute;
+    opacity: 0;
+    pointer-events: none;
+  }
+
+  label {
+    cursor: pointer;
+  }
+
+  .checkbox-text {
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+    background-image: url('../images/unchecked.svg');
+    background-size: cover;
+    margin-right: 0.3125rem;
+    vertical-align: middle;
+  }
+
+  input:checked ~ .checkbox-text {
+    background-image: url('../images/checked.svg');
+  }
+}
+
+/* 네이버 로그인 폼 디자인 */
+h3 {
+  text-align: center;
+
+  svg {
+    width: 230px;
+  }
+}
+
+form {
+  --max-width: 31.25rem;
+
+  width: var(--max-width);
+  margin-inline: auto;
+  padding-inline: 1.25rem;
+
+  .form-input {
+    margin-block-end: var(--spacing-10);
+
+    .form-input-error {
+      --error-color: var(--red);
+
+      display: none;
+      margin-block: var(--spacing-8) var(--spacing-10);
+      color: var(--error-color);
+      font-size: var(--text-14);
+      line-height: var(--leading);
+    }
+
+    input:not(:focus):not(:placeholder-shown):invalid ~ .form-input-error {
+      display: block;
+    }
+
+    input:valid ~ .form-input-error {
+      display: none;
+    }
+  }
+
+  .fill-button {
+    width: 100%;
+    margin-block: var(--spacing-20) var(--spacing-10);
+    cursor: pointer;
+  }
+
+  .form-checkbox {
+    @media (width <= 768px) {
+      float: right;
+    }
+  }
+
+  .form-check-onoff {
+    --font-color: var(--gray);
+    --font-color-checked: var(--green);
+
+    font-size: var(--text-16);
+    color: var(--font-color);
+    line-height: var(--leading);
+    font-weight: 700;
+    float: right;
+
+    a {
+      --font-color: var(--black);
+
+      text-decoration: none;
+      color: var(--font-color);
+      font-weight: 400;
+      margin-right: var(--spacing-8);
+    }
+
+    label {
+      cursor: pointer;
+    }
+
+    input {
+      position: absolute;
+      opacity: 0;
+      width: 0;
+      height: 0;
+    }
+
+    span {
+      display: none;
+    }
+
+    .checked {
+      color: var(--font-color-checked);
+    }
+
+    .unchecked {
+      display: inline-block;
+    }
+
+    input:checked ~ .unchecked {
+      display: none;
+    }
+
+    input:checked ~ .checked {
+      display: inline-block;
+    }
+
+    @media (width <= 768px) {
+      display: none;
+    }
+  }
+
+  @media (width <= 768px) {
+    width: 100%;
+    padding-inline: 1.25rem;
+  }
+}
+
+*:focus {
+  outline-color: var(--focus-color);
+}
+
+input[type='checkbox']:focus ~ span {
+  outline: 2px solid var(--focus-color);
+  border-radius: 2px;
+  outline-offset: 0px;
+}
