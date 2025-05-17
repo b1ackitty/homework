@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="ko">
   <head>
     <meta charset="UTF-8" />
@@ -7,10 +7,130 @@
     <link rel="icon" href="./favicon/apple-favicon.svg" />
     <link rel="apple-touch-icon" href="./favicon/apple-favicon.svg" />
     <link href="https://cdn.jsdelivr.net/gh/sun-typeface/SUIT/fonts/variable/woff2/SUIT-Variable.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" />
     <link rel="stylesheet" href="./styles/apple.css" />
   </head>
   <body>
     <!-- 카드 레이아웃 -->
-
+    <h1 class="sr-only">Apple 제품 소개</h1>
+    <nav>
+      <ul>
+        <li>
+          <a href="#">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 50 50" fill="currentColor" width="14px" height="14px" aria-hidden="true">
+              <path
+                d="M 44.527344 34.75 C 43.449219 37.144531 42.929688 38.214844 41.542969 40.328125 C 39.601563 43.28125 36.863281 46.96875 33.480469 46.992188 C 30.46875 47.019531 29.691406 45.027344 25.601563 45.0625 C 21.515625 45.082031 20.664063 47.03125 17.648438 47 C 14.261719 46.96875 11.671875 43.648438 9.730469 40.699219 C 4.300781 32.429688 3.726563 22.734375 7.082031 17.578125 C 9.457031 13.921875 13.210938 11.773438 16.738281 11.773438 C 20.332031 11.773438 22.589844 13.746094 25.558594 13.746094 C 28.441406 13.746094 30.195313 11.769531 34.351563 11.769531 C 37.492188 11.769531 40.8125 13.480469 43.1875 16.433594 C 35.421875 20.691406 36.683594 31.78125 44.527344 34.75 Z M 31.195313 8.46875 C 32.707031 6.527344 33.855469 3.789063 33.4375 1 C 30.972656 1.167969 28.089844 2.742188 26.40625 4.78125 C 24.878906 6.640625 23.613281 9.398438 24.105469 12.066406 C 26.796875 12.152344 29.582031 10.546875 31.195313 8.46875 Z"
+              /></svg
+            ><span class="sr-only">Apple 홈페이지</span>
+          </a>
+        </li>
+        <li><a href="#">스토어</a></li>
+        <li><a href="#">Mac</a></li>
+        <li><a href="#">iPad</a></li>
+        <li><a href="#">iPhone</a></li>
+        <li><a href="#">Watch</a></li>
+        <li><a href="#">Vision</a></li>
+        <li><a href="#">AirPods</a></li>
+        <li><a href="#">TV 및 홈</a></li>
+        <li><a href="#">엔터테인먼트</a></li>
+        <li><a href="#">액세서리</a></li>
+        <li><a href="#">고객지원</a></li>
+        <li>
+          <a href="#"><span class="fas fa-magnifying-glass" aria-hidden="true"></span><span class="sr-only">검색</span></a>
+        </li>
+        <li>
+          <a href="#"><span class="fas fa-cart-shopping" aria-hidden="true"></span><span class="sr-only">장바구니</span></a>
+        </li>
+      </ul>
+    </nav>
+    <main>
+      <ul class="card-container">
+        <li class="card-wrapper">
+          <!-- 제품 소개 -->
+          <h2 class="product-name">iPad Pro</h2>
+          <p class="product-intro">
+            <span>놀라우리만치 얇다.</span>
+            <span>엄청나게 강력하다.</span>
+          </p>
+          <p class="additional-info">출시일 추후 공개</p>
+          <!-- 전체 클리커블 -->
+          <a class="card-link" href="#" aria-hidden="true" tabindex="-1"></a>
+          <!-- 버튼 -->
+          <a class="button button-fill" href="#">더 알아보기</a>
+          <a class="button button-outline" href="#">가격 보기</a>
+        </li>
+        <li class="card-wrapper">
+          <!-- 제품 소개 -->
+          <h2 class="product-name">iPad air</h2>
+          <p class="product-intro">
+            <span>두 가지 사이즈. 더 빠른 칩.</span>
+            <span>무엇이든 거뜬하게.</span>
+          </p>
+          <p class="additional-info">출시일 추후 공개</p>
+          <!-- 전체 클리커블 -->
+          <a class="card-link" href="#" aria-hidden="true" tabindex="-1"></a>
+          <!-- 버튼 -->
+          <a class="button button-fill" href="#">더 알아보기</a>
+          <a class="button button-outline" href="#">가격 보기</a>
+        </li>
+        <li class="card-wrapper">
+          <!-- 제품 소개 -->
+          <h2 class="product-name">iPhone 15 Pro</h2>
+          <p class="product-intro">티타늄. 초강력. 초경량. 초프로.</p>
+          <!-- 전체 클리커블 -->
+          <a class="card-link" href="#" aria-hidden="true" tabindex="-1"></a>
+          <!-- 버튼 -->
+          <a class="button button-fill" href="#">더 알아보기</a>
+          <a class="button button-outline" href="#">가격 보기</a>
+        </li>
+        <li class="card-wrapper">
+          <!-- 제품 소개 -->
+          <h2 class="product-name">iPhone 15</h2>
+          <p class="product-intro">
+            <span>새로운 카메라.</span>
+            <span>새로운 디자인.</span>
+            <span>새로움이 물씬.</span>
+          </p>
+          <!-- 전체 클리커블 -->
+          <a class="card-link" href="#" aria-hidden="true" tabindex="-1"></a>
+          <!-- 버튼 -->
+          <a class="button button-fill" href="#">더 알아보기</a>
+          <a class="button button-outline" href="#">가격 보기</a>
+        </li>
+        <li class="card-wrapper">
+          <!-- 제품 소개 -->
+          <h2 class="product-name">WATCH</h2>
+          <p class="product-intro">보다 똑똑. 보다 또렷. 보다 강력.</p>
+          <!-- 전체 클리커블 -->
+          <a class="card-link" href="#" aria-hidden="true" tabindex="-1"></a>
+          <!-- 버튼 -->
+          <a class="button button-fill" href="#">더 알아보기</a>
+          <a class="button button-outline" href="#">가격 보기</a>
+        </li>
+        <li class="card-wrapper">
+          <!-- 제품 소개 -->
+          <h2 class="product-name">MacBook Air</h2>
+          <p class="product-intro">날렵하게. 강력하게. M3답게.</p>
+          <!-- 전체 클리커블 -->
+          <a class="card-link" href="#" aria-hidden="true" tabindex="-1"></a>
+          <!-- 버튼 -->
+          <a class="button button-fill" href="#">더 알아보기</a>
+          <a class="button button-outline" href="#">가격 보기</a>
+        </li>
+        <li class="card-wrapper">
+          <!-- 제품 소개 -->
+          <h2 class="product-name">airPods Pro</h2>
+          <p class="product-intro">
+            <span>전에 없던 청취 경험.</span>
+            <span>적응형 오디오.</span>
+          </p>
+          <!-- 전체 클리커블 -->
+          <a class="card-link" href="#" aria-hidden="true" tabindex="-1"></a>
+          <!-- 버튼 -->
+          <a class="button button-fill" href="#">더 알아보기</a>
+          <a class="button button-outline" href="#">가격 보기</a>
+        </li>
+      </ul>
+    </main>
   </body>
 </html>

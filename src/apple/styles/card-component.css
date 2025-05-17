@@ -1,3 +1,93 @@
-@import "./reset.css";
-@import "./theme.css";
-@import "./base.css";
+@import './reset.css';
+@import './theme.css';
+@import './base.css';
+
+/* 제품 소개 */
+.product-name {
+  --text-color: var(--black);
+
+  color: var(--text-color, #1d1d1f);
+  font-size: var(--large-text);
+  font-weight: 700;
+}
+
+.product-intro {
+  --text-color: var(--black);
+
+  color: var(--text-color, #1d1d1f);
+  font-size: var(--base-text);
+  /* line-height: var(--line-normal); */
+  /* margin-block-end: var(--x-small-spacing); */
+}
+
+.additional-info {
+  font-size: var(--small-text);
+  color: var(--gray, #86868b);
+}
+
+/* 버튼 */
+/* 버튼 공통 */
+.button {
+  --button-color: var(--black);
+  --hover-color: var(--darkgray);
+
+  display: inline-block;
+  font-size: var(--xx-small-text);
+  color: var(--button-color, #1d1d1f);
+  border: 1px solid var(--button-color, #1d1d1f);
+  border-radius: 2.5rem;
+  padding-block: var(--x-small-spacing);
+  padding-inline: var(--small-spacing);
+  min-inline-size: calc(max-content + (var(--small-spacing) * 2));
+  z-index: 1;
+
+  &:hover,
+  &:focus {
+    border-color: var(--hover-color, #2b2b2e);
+    background: var(--hover-color, #2b2b2e);
+    color: var(--white, #fff);
+  }
+
+  &:focus {
+    outline: 2px solid var(--hover-color, #2b2b2e);
+    outline-offset: 3px;
+  }
+}
+
+.button-fill {
+  --button-color: var(--black);
+
+  background: var(--button-color, #1d1d1f);
+  color: var(--white, #fff);
+}
+
+/* 카드 컴포넌트 */
+.card-wrapper {
+  background: no-repeat center/cover;
+  background-image: image-set(url('../products/ipad_air.jpeg') 1x type('image/jpeg'), url('../products/ipad_air.webp') 1x type('image/webp'), url('../products/ipad_air_2x.jpeg') 2x type('image/jpeg'), url('../products/ipad_air_2x.webp') 2x type('image/webp'));
+  block-size: var(--size);
+  padding-block-start: var(--large-spacing);
+  position: relative;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  align-content: start;
+  gap: var(--small-spacing);
+  /* column-gap: var(--base-spacing); */
+
+  h2,
+  p {
+    inline-size: 100%;
+    text-align: center;
+  }
+
+  .card-link {
+    display: block;
+    position: absolute;
+    inset-block-start: 0;
+    inset-inline-start: 0;
+    block-size: 100%;
+    inline-size: 100%;
+    cursor: pointer;
+  }
+}
